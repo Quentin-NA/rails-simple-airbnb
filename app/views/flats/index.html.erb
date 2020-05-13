@@ -1,0 +1,18 @@
+<div class="container">
+<h1 class="text-center my-4">All our Flats (<%= @flats.count %>)</h1>
+<div class="row">
+<div class="d-flex justify-content-around align-items-end card shadow rounded ">
+<% @flats.each do |flat| %>
+<div class="col-sm">
+    <li class="border mx-3 p-2 text-decoration-none align-items-end">
+      <%= flat.description %><br><br>
+      <%= flat.address %><br><br>
+      <div class="small">
+         <i class="material-icons">people</i><%= flat.number_of_guests %>
+         <i class="material-icons">euro_symbol</i><%= flat.price_per_night %>
+      </div>
+    </li>
+    </div>
+<% end %>
+</div>
+</div>
